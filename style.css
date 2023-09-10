@@ -1,0 +1,147 @@
+
+body{
+    padding: 0px;
+    margin:0px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.barraSuperior{
+    display:flex;
+    justify-content: space-between;
+    background-color: black ;
+    color:white;
+    margin: 0 auto;
+    padding: 0px 10%;
+
+}
+
+.barMenu{
+    display:flex;
+    list-style: none;
+
+}
+.barMenu a{
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    color:rgb(145, 145, 145);
+    text-decoration: none;
+}
+
+.barMenu a:hover{
+    color:rgb(255, 255, 255);
+    background-color: #421e1e;
+    border-color: #421e1e;
+    font-weight: bold;
+
+}
+
+#conteudo{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin: 20px auto;
+    padding: 0;
+}
+
+
+#barraLateral{
+    display:block;
+    grid-column: 1 / 2;
+    grid-row: 1 3;
+
+}
+#barraLateral h1{
+    display:block;
+    width: 100%;
+}
+.marca{
+    font-size: 2em;
+}
+
+.sideMenu li{
+    border: 1px solid #3a3a3a;
+    padding: 10px;
+}
+
+.sideMenu li a{
+    color:rgb(53, 53, 131);
+}
+
+.sideMenu li a:hover{
+    color:rgb(56, 5, 5);
+}
+
+.sideMenu a{
+    text-decoration: none;
+}
+
+.carrousel{
+    display: grid;
+    grid-column: 2 / 5;
+}
+.carrousel img{
+    width: 100%;
+    border:1px solid lightgray;
+}
+
+.cardSection{
+    display: grid ;
+    grid-column: 2 / 5;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+}
+
+.cardSection a{
+    text-decoration: none;
+}
+
+.card{
+    display: inline-block;
+    width: 100%;
+    text-align: justify;
+    margin: 0 auto;
+    border: 1px solid lightgray;
+}
+
+.card p{
+    padding: 0px 15px;
+}
+.card img{
+    width: inherit;
+}
+.item{
+    font-size: 1.3 iem;
+}
+
+
+
+
+/* responsividade */
+
+@media screen and (max-width: 700px){
+    .carrousel,
+    .cardSection{
+        display: block;
+        grid-row:auto;
+        grid-column: 1/2;
+    }
+    #barraLateral{
+        grid-row: 1/2;   
+    }
+    #conteudo{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .barMenu a{
+        font-size: 12px;
+    }  
+}
